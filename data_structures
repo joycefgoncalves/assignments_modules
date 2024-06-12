@@ -1,0 +1,33 @@
+# contacts_manager.py
+
+# Global variable to store the list of contacts
+contacts_list = []
+
+def add_contact(name, phone_number):
+    """
+    Add a new contact to the contacts list.
+    """
+    contacts_list.append({"name": name, "phone_number": phone_number})
+    print("Contact added successfully.")
+
+def remove_contact(name):
+    """
+    Remove a contact from the contacts list.
+    """
+    for contact in contacts_list:
+        if contact["name"] == name:
+            contacts_list.remove(contact)
+            print("Contact removed successfully.")
+            return
+    print("Contact not found.")
+
+def display_contacts():
+    """
+    Display all contacts in the contacts list.
+    """
+    if not contacts_list:
+        print("No contacts found.")
+    else:
+        print("Contacts:")
+        for contact in contacts_list:
+            print(f"Name: {contact['name']}, Phone Number: {contact['phone_number']}")

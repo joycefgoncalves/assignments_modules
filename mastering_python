@@ -1,0 +1,32 @@
+# text_utils.py
+
+def reverse_string(s):
+    """
+    Reverse a string.
+    """
+    return s[::-1]
+
+def capitalize_string(s):
+    """
+    Capitalize a string.
+    """
+    return s.capitalize()
+
+# main.py
+
+import text_utils as tu
+
+def main():
+    # Test the functions from text_utils.py
+    string_to_reverse = "hello world"
+    reversed_string = tu.reverse_string(string_to_reverse)
+    print("Original String:", string_to_reverse)
+    print("Reversed String:", reversed_string)
+
+    string_to_capitalize = "python is fun"
+    capitalized_string = tu.capitalize_string(string_to_capitalize)
+    print("Original String:", string_to_capitalize)
+    print("Capitalized String:", capitalized_string)
+
+if __name__ == "__main__":
+    main()
