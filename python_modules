@@ -1,0 +1,22 @@
+# mood_responses.py
+
+def mood_response(mood):
+    if mood.lower() == "happy":
+        return "It's great to hear that you're happy!"
+    elif mood.lower() == "sad":
+        return "I'm sorry to hear that you're feeling sad. Remember, it's okay to not be okay."
+    elif mood.lower() == "excited":
+        return "Awesome! Excitement is contagious. What's got you feeling excited?"
+    else:
+        return "I'm not sure how to respond to that mood. Let's talk about it!"
+
+# main.py
+
+import mood_responses
+
+def main():
+    mood = input("How are you feeling today? ")
+    print(mood_responses.mood_response(mood))
+
+if __name__ == "__main__":
+    main()
